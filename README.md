@@ -67,3 +67,76 @@ Follow the prompts to enter the IP addresses or ranges, and select the type of s
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+## ESPAÑOL 
+# Script Automatizado de Escaneo de Puertos con Nmap
+
+Este script en Python automatiza el proceso de escaneo de puertos utilizando Nmap, proporcionando opciones para escaneos básicos, avanzados y basados en scripts NSE. Incluye características como el escaneo solo de hosts activos (ignorando los que están caídos) y la notificación de cuántos puertos serán escaneados.
+
+## Características
+- **Escaneo básico**: Escanea los 1000 puertos más importantes.
+- **Escaneo avanzado**: Escanea todos los puertos TCP y/o UDP (puertos 1-65535 para TCP, los 1000 principales para UDP).
+- **Escaneo con scripts NSE**: Permite al usuario seleccionar scripts específicos de Nmap (NSE).
+- **Solo hosts activos**: Muestra resultados solo de hosts que están activos (up).
+- **Notificación de puertos**: Muestra la cantidad de puertos que se escanearán antes de iniciar el escaneo.
+
+## Instalación
+
+### Requisitos
+- **Python 3.x**
+- **Nmap** instalado en tu sistema
+- Librería **python-nmap** para Python
+
+### Instalación en Kali o Parrot OS
+
+Dado que Kali y Parrot OS utilizan un entorno gestionado externamente, necesitas instalar los paquetes de Python requeridos en un entorno virtual.
+
+1. Crea un entorno virtual:
+    ```bash
+    python3 -m venv venv
+    ```
+
+2. Activa el entorno virtual:
+    ```bash
+    source venv/bin/activate
+    ```
+
+3. Instala el paquete `python-nmap` usando `pip`:
+    ```bash
+    pip install python-nmap --break-system-packages
+    ```
+
+4. (Opcional) Si necesitas desactivar el entorno virtual:
+    ```bash
+    deactivate
+    ```
+
+### Ejecución del Script
+
+1. Asegúrate de tener **Nmap** instalado:
+    ```bash
+    sudo apt-get install nmap
+    ```
+
+2. Ejecuta el script de Python:
+    ```bash
+    sudo python3 auto_nmap.py
+    ```
+
+Sigue las indicaciones para introducir las direcciones IP o rangos, y selecciona el tipo de escaneo (básico, avanzado o basado en scripts NSE).
+
+## Ejemplo de Uso
+
+- Para escanear un rango de IP específico, introdúcelo de la siguiente manera:
+    ```
+    192.168.1.100-150
+    ```
+
+- Para un escaneo básico, selecciona "b".
+- Para opciones avanzadas como escaneo completo de puertos o detección de servicios, selecciona "a".
+- Para escaneo con scripts NSE, selecciona "s".
+
+## Licencia
+Este proyecto está bajo la licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
+
