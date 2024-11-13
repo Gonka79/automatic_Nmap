@@ -23,7 +23,9 @@ You can install all required dependencies using the provided script:
 
 1. Run the installation script:
     ```bash
-    sudo bash install_resources.sh
+    git clone https://github.com/Gonka79/automatic_Nmap.git
+    cd automatic_Nmap
+    sudo ./install_resources.sh
     ```
 
 This script installs Nmap, Python, and the necessary Python packages in a virtual environment.
@@ -114,7 +116,9 @@ Puedes instalar todas las dependencias necesarias usando el siguiente script:
 
 1. Ejecuta el script de instalación:
     ```bash
-    sudo bash install_resources.sh
+    git clone https://github.com/Gonka79/automatic_Nmap.git
+    cd automatic_Nmap
+    sudo ./install_resources.sh
     ```
 
 Este script instala Nmap, Python y los paquetes de Python necesarios en un entorno virtual.
